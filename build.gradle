@@ -1,0 +1,45 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'org.web3j' version '4.6.4'
+}
+
+group = 'dev.iot'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+web3j {
+    generatedPackageName = 'dev.wickedenterprise'
+    addressBitLength = 160
+}
+
+dependencies {
+    implementation 'com.google.api-client:google-api-client:1.33.0'
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.32.1'
+    implementation 'com.google.apis:google-api-services-sheets:v4-rev20210629-1.32.1'
+
+    implementation 'org.telegram:telegrambots-spring-boot-starter:5.7.1'
+
+    implementation 'org.web3j:core:4.9.1'
+    implementation 'org.web3j:crypto:4.9.1'
+    implementation 'org.web3j:contracts:4.9.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.4.0'
+
+    implementation 'com.pi4j:pi4j-core:2.1.1'
+    implementation 'com.pi4j:pi4j-plugin-raspberrypi:2.1.1'
+    implementation 'com.pi4j:pi4j-plugin-pigpio:2.1.1'
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
