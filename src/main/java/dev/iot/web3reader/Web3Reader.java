@@ -76,6 +76,7 @@ public class Web3Reader {
             }
         } else {
             log.debug("No events found for Blocks " + from + " to " + to);
+            lastBlock = to;
         }
     }
 
