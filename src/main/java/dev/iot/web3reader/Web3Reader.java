@@ -52,6 +52,7 @@ public class Web3Reader {
     }
 
     public void readEventsFromContract(BigInteger from, BigInteger to) throws IOException {
+        log.debug("Read events from " + from + " to " + to + " last block " + lastBlock);
         EthFilter eventFilter = new EthFilter(DefaultBlockParameter.valueOf(from), DefaultBlockParameter.valueOf(to), switchContract.getContractAddress());
         String encodedEventSignature = EventEncoder.encode(Switch.SWITCHTURNED_EVENT);
         eventFilter.addSingleTopic(encodedEventSignature);
@@ -67,7 +68,6 @@ public class Web3Reader {
                 if (lastLogEntry.getBlockNumber().compareTo(lastBlock) > 0) {
                     log.debug("user | switch : | 0x" + address + " | " + state);
                     newState = LEDState.values()[Integer.parseInt(state)];
-                    lastBlock = lastLogEntry.getBlockNumber();
                 }
             }
             if (newState != ledState) {
@@ -76,8 +76,8 @@ public class Web3Reader {
             }
         } else {
             log.debug("No events found for Blocks " + from + " to " + to);
-            lastBlock = to;
         }
+        lastBlock = to;
     }
 
     private void switchLed() {
