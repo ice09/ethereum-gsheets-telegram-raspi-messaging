@@ -1,6 +1,6 @@
 package dev.iot.web3reader;
 
-import dev.wickedenterprise.Switch;
+import dev.iot.Switch;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.OkHttpClient;
 import org.springframework.beans.factory.annotation.Value;

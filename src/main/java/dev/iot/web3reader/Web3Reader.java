@@ -1,8 +1,8 @@
 package dev.iot.web3reader;
 
+import dev.iot.Switch;
 import dev.iot.pi.AbstractPiController;
 import dev.iot.pi.LEDState;
-import dev.wickedenterprise.Switch;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.scheduling.annotation.Scheduled;

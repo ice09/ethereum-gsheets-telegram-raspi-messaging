@@ -14,7 +14,7 @@ repositories {
 }
 
 web3j {
-    generatedPackageName = 'dev.wickedenterprise'
+    generatedPackageName = 'dev.iot'
     addressBitLength = 160
 }
 
