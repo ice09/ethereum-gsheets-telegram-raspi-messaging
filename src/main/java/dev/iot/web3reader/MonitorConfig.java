@@ -66,7 +66,7 @@ public class MonitorConfig {
     }
 
     private void configureTimeouts(OkHttpClient.Builder builder) {
-        long tos = 800000L;
+        long tos = 180;
         builder.connectTimeout(tos, TimeUnit.SECONDS);
         builder.readTimeout(tos, TimeUnit.SECONDS);  // Sets the socket timeout too
         builder.writeTimeout(tos, TimeUnit.SECONDS);
