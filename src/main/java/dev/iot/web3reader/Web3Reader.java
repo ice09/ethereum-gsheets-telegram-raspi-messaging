@@ -68,6 +68,8 @@ public class Web3Reader {
                 if (lastLogEntry.getBlockNumber().compareTo(lastBlock) > 0) {
                     log.debug("user | switch : | 0x" + address + " | " + state);
                     newState = LEDState.values()[Integer.parseInt(state)];
+                } else {
+                    log.error("received old block for " + address + " | " + state + " at " + lastLogEntry.getBlockNumber() + " but last block is " + lastBlock);
                 }
             }
             if (newState != ledState) {
