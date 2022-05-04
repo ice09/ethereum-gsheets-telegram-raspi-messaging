@@ -130,4 +130,12 @@ service = new Sheets.Builder(
 
 ## TelegramBot Messaging
 
+* Create the Bot (we used *raspi_led_switch*, if you use it, you switch our LED)
+
 <img src="img_10.png" width="60%"/>
+
+* Invite Bot *raspi_led_switcher* to a Group or chat with it directly
+
+![](img_11.png)
+
+_Note: In your Bot, make sure that not everybody can use it, eg. by restricting it to a specific **chatId**._
