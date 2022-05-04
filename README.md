@@ -2,7 +2,7 @@
 
 ## DIY: Build Stupid and Crazy Expensive Messaging for LED Switches
 
-<p align="center"><img src="img_7.png" width="80%"/></p>
+<p align="center"><img src="docs/img/overview.png" width="80%"/></p>
 
 ## Setup
 
@@ -72,11 +72,11 @@ contract Switch {
 
 * Write the Smart Contract function `turnSwitch`, eg. in the Remix IDE (https://remix.ethereum.org/) or the Blockscout Gnosis Chain Explorer (https://blockscout.com/) 
 
-![](img_8.png)
+![](docs/img/blockscout_1.png)
 
 After a successful transaction, the Event turnSwitch is emitted as the only instruction in the function is `emit SwitchTurn(...)`
 
-![](img_9.png)
+![](docs/img/blockscout_2.png)
 
 ## GoogleSheet Messaging
 
@@ -86,20 +86,20 @@ For *GoogleSheet* Messaging,
 * Create new project
 * Go to Google Cloud Console, Activate GSheet API
 
-<img src="img_1.png" width="80%"/>
+<img src="docs/img/enable_apis.png" width="80%"/>
 
-<img src="img_2.png" width="60%"/>
+<img src="docs/img/enable_sheets_api.png" width="60%"/>
 
 * Create GSheet, Share with “Anyone with link” for Viewer
 
-<img src="img.png" width="80%"/>
+<img src="docs/img/share_sheet.png" width="80%"/>
 
 * Create Form for GSheet to switch values
 
-<img src="img_3.png" width="100%"/>
-<img src="img_4.png" width="80%"/>
-<img src="img_5.png" width="80%"/>
-<img src="img_6.png" width="60%"/>
+<img src="docs/img/create_form.png" width="100%"/>
+<img src="docs/img/led_switch_form.png" width="80%"/>
+<img src="docs/img/led_switch_view.png" width="80%"/>
+<img src="docs/img/sheet_result.png" width="60%"/>
 
 * Get API Key: https://developers.google.com/sheets/api/guides/authorizing#APIKey
 
@@ -132,10 +132,10 @@ service = new Sheets.Builder(
 
 * Create the Bot (we used *raspi_led_switch*, if you use it, you switch our LED)
 
-<img src="img_10.png" width="60%"/>
+<img src="docs/img/botfather.png" width="60%"/>
 
 * Invite Bot *raspi_led_switcher* to a Group or chat with it directly
 
-![](img_11.png)
+![](docs/img/tg_led_chat.png)
 
 _Note: In your Bot, make sure that not everybody can use it, eg. by restricting it to a specific **chatId**._
