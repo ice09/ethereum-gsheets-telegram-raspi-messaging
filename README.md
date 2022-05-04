@@ -2,7 +2,7 @@
 
 ## DIY: Build Stupid and Crazy Expensive Messaging for LED Switches
 
-<img src="img_7.png" width="80%"/>
+<img src="img_7.png" style="text-align: center;" width="80%"/>
 
 ## Setup
 
