@@ -2,6 +2,8 @@
 
 ## DIY: Build Stupid and Crazy Expensive Messaging for LED Switches
 
+This repo contains the Spring Boot messaging modules for all three messaging options (Google Sheets, Telegram Bot, Ethereum/Gnosis Chain) mentioned in the [accompanying blog post](https://ice09.github.io/build-crazy-messaging-raspi/). 
+
 <p align="center"><img src="docs/img/overview.png" width="80%"/></p>
 
 ## Setup
