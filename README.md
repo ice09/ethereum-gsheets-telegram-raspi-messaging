@@ -8,6 +8,19 @@ This repo contains the Spring Boot messaging modules for all three messaging opt
 
 ## Setup
 
+### Build Locally
+
+#### Prerequisites
+
+* Java 11+
+* (Opt.) Java IDE like IntelliJ IDEA, Eclipse or VS Code
+
+#### Build executable JAR 
+
+* Clone this repository
+* Run `gradlew build` in root folder
+* Generated executable JAR `raspi-messaging-0.0.1-SNAPSHOT.jar` is in `build\libs`
+
 ### Start on Raspberry Pi
 
 _Note: Pi4j must be invoked as **sudo**_
